@@ -215,7 +215,7 @@ void getData() {
 }
 
 void sendOsc() {
-  OscMessage msg = new OscMessage("/wek/inputs");
+  OscMessage msg = new OscMessage("/wek/inputs/b");
   //println("FeatureMode = " + featureMode);
   if (featureMode == 0) { //Accelerometers only
     msg.add(float(finala1)); 
@@ -265,7 +265,7 @@ void endSegment() {
          a3_20[i] = a3list[i*factor]; 
 
       }
-      OscMessage msg = new OscMessage("/wek/inputs");
+      OscMessage msg = new OscMessage("/wek/inputs/b");
       for (int i = 0; i < 20; i++) {
          msg.add(float(a1_20[i]));  
       }
