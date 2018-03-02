@@ -23,7 +23,7 @@ a custom python OSC message merger, which then took messages from both devices a
 
 ### ML model structure
 Considering this project is focused on construting a dynamic time warping-based system, that is the overall model we used. In order to make our model as robust
-as possible, we used training examples moving at several different speeds. 
+as possible, we used training examples moving at several different speeds and included a resting state so that it would not assume that we were continuously punching. 
 
 ## Improvements
 While we originally intended our project to pass data to the model via BlueTooth, the doumentation and tools we encountered were sparse and we were unable to 
@@ -32,4 +32,4 @@ we were forced to use long micro-usb cable as our primary form of communication 
 may want to incorporate wireless tracking via BlueTooth into the system. 
 
 ## Demo video
-
+Check out our demo video [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
