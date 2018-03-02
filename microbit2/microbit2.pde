@@ -85,7 +85,7 @@ void setup() {
      
   //Set up OSC:
   oscP5 = new OscP5(this,8000);
-  dest = new NetAddress("10.201.27.213",6448);
+  dest = new NetAddress("localhost",6448);
 }
 
 //Called when new features type selected in drop-down
@@ -126,7 +126,7 @@ void draw() {
   background(240);
   textFont(fBig);
   fill(0);
-  text("micro:bit to OSC by Rebecca Fiebrink", 10, 10);
+  text("MICROBIT B", 10, 10);
   text("Select serial port:", 10, 40);
   text("Accelerometers: " + finala1, 10, 100);
   text(finala2, 150, 100);
