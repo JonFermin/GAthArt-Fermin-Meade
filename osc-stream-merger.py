@@ -16,7 +16,7 @@ most_recent_b = None
 def send_a_and_b():
 	global most_recent_a, most_recent_b
 	if (most_recent_a is None) or (most_recent_b is None):
-		print("Awaiting complete data!")
+		return
 	else:
 		combined = most_recent_a + most_recent_b
 		print("Sending /AB: " + str(combined))
@@ -25,18 +25,16 @@ def send_a_and_b():
 def got_a(addr, arg1, arg2, arg3):
 	try:
 		global most_recent_a
-		if args is not list: args = (args,)
 		most_recent_a = [arg1, arg2, arg3]
-		print("Received /A: " + str(args))
+		print("Received /A: " + str(arg1) + " " + str(arg2) + " " + str(arg3))
 	except:
 		print(addr)
 
 def got_b(addr, arg1, arg2, arg3):
 	try:
 		global most_recent_b
-		if args is not list: args = (args,)
 		most_recent_b = [arg1, arg2, arg3]
-		print("Received /B: " + str(args))
+		print("Received /B: " + str(arg1) + " " + str(arg2) + " " + str(arg3))
 	except:
 		print(addr)
 
@@ -47,3 +45,5 @@ dispatcher.map("/wek/inputs/b", got_b)
 server = osc_server.ThreadingOSCUDPServer((input_host, input_port), dispatcher)
 print("Serving on {}".format(server.server_address))
 server.serve_forever()
+while True:
+	send_a_and_b()
