@@ -32,4 +32,4 @@ we were forced to use long micro-usb cable as our primary form of communication 
 may want to incorporate wireless tracking via BlueTooth into the system. 
 
 ## Demo video
-Check out our demo video [here](https://www.youtube.com/DeVUCPqEGzE).
+Check out our demo video [here](https://www.youtube.com/watch?v=DeVUCPqEGzE&feature=youtu.be).
