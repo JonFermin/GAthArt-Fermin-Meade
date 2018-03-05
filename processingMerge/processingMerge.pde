@@ -20,14 +20,22 @@ void setup() {
 }
  /* recieves inputs from two programs*/
 void oscEvent(OscMessage theOscMessage) {
- if (theOscMessage.checkAddrPattern("/wek/inputs")==true) {
-     if(theOscMessage.checkTypetag("ffffff")) { //Now looking for 2 parameters
+ if (theOscMessage.checkAddrPattern("/wek/inputs/a")==true) {
+     if(theOscMessage.checkTypetag("fff")) { //Now looking for 2 parameters
         p1 = theOscMessage.get(0).floatValue(); //get first parameter
         p2 = theOscMessage.get(1).floatValue(); 
         p3 = theOscMessage.get(2).floatValue(); 
-        p4 = theOscMessage.get(3).floatValue(); //get 2nd parameter
-        p5 = theOscMessage.get(4).floatValue();
-        p6 = theOscMessage.get(5).floatValue();
+
+        println("Received new params value from Wekinator");  
+      } else {
+        println("Error: unexpected params type tag received by Processing");
+      }
+ }
+ if (theOscMessage.checkAddrPattern("/wek/inputs/b")==true) {
+     if(theOscMessage.checkTypetag("fff")) { //Now looking for 2 parameters
+        p4 = theOscMessage.get(0).floatValue(); //get first parameter
+        p5 = theOscMessage.get(1).floatValue(); 
+        p6 = theOscMessage.get(2).floatValue(); 
 
         println("Received new params value from Wekinator");  
       } else {
