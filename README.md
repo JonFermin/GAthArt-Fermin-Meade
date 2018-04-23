@@ -1,5 +1,5 @@
 # GAthArt-Fermin-Meade
-A program which uses the micro:bit's acceleramator to detect certain types of boxing punches and combinations.   
+A program which uses the micro:bit's accelerometer to detect certain types of boxing punches and combinations.   
 Jon Fermin   
 Jonathan Meade   
 CSCI-4830   
